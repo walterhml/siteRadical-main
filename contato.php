@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Contato</title>
+</head>
+<body>
+    <header id="topo">
+        <div>
+            <h1>
+                <a href="index.html"><img src="imagem/logo.png" alt="logotipo"></a>
+            </h1>
+            <nav>
+                <a href="index.html" tabindex="1">Home</a>
+                <a href="pacotes.html" tabindex="3">Pacotes</a>
+                <a href="contato.html" tabindex="2">Contato</a>
+                <a href="acessorios.html" tabindex="4">Acessorios</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <div class="conteudo-info" id="conteudo-contato">
+            <article class="cont-contato">
+                <div class="formulario">
+
+        
+                <?php
+                    if(isset( $_POST['enviar']) ){
+                        //verificar os campos indicados no formulario
+                        if( !empty($_POST['nome']) &&  !empty($_POST['email']) && !empty($_POST['telefone']) && !empty($_POST['assunto']) && !empty($_POST['mensagem'])){
+
+
+                        $nome = $_POST['nome'];
+                        $email = $_POST['email'];
+                        $telefone = $_POST['telefone'];
+                        $assunto = $_POST['assunto'];
+                        $mensagem = $_POST['mensagem'];
+
+                        //$data = date ("Y-m-d H:i:s")
+                        }
+                    }
+
+                    ?>
+
+                    <p>Seus dados foram enviados com sucesso!</p>
+                    <p>Em breve responderei sua mensagem.</p>
+
+
+                    <?php
+
+                }else{
+                    ?>
+                    <p>Você deve preencher os campos obrigatórios</p>
+                    <p><a href="contato.php"><b>Voltar para o formulário</b></a></p>
+
+                    <?php
+                }
+
+            } else {
+
+                ?>
+
+
+
+                    <h2 class="titulo">Contato</h2>
+                    <p> Preencha os campos abaixo para entrar em contato com nossa equipe de atendimento.</p>
+                    <form action="" id="form-contato" method="post">
+                        <p>
+                            <label for="nome">Nome:</label>
+                            <input tabindex="5" required type="text" id="nome" name="nome">
+                        </p>
+
+                        <p>
+                            <label for="email">E-mail:</label>
+                            <input tabindex="6" required type="email" id="email" name="email">
+                        </p>
+
+                        <p>
+                            <label for="telefone">Celular:</label>
+                            <input tabindex="7" required type="tel" id="telefone" name="telefone">
+                        </p>
+
+                        <p>
+                            <label for="assunto">Assunto:</label>
+                            <input tabindex="8" required type="text" id="assunto" name="assunto">
+                        </p>
+
+                        <p>
+                            <label for="mensagem">Mensagem:</label>
+                            <input tabindex="9" id="mensagem" name="mensagem" cols="30" rows="6">
+                        </p>
+
+                        <p>
+                            <button tabindex="10" id="limpar" type="reset" name="limpar">Limpar campos</button>
+                            <button tabindex="11" id="Enviar" name="enviar">Enviar Dados</button>
+                        </p>
+                    </form>
+                    <?php
+
+            }
+            ?>
+
+              
+
+                </div>
+            </article>
+
+            <article class="cont-contato" id="localizacao-end">
+                <div class="localização">
+                    <h2 class="titulo">Localização</h2>
+                    <p>Rua Tito, 54 - Vila Romana<br> CEP:05051-000 - São Paulo<br>Telefone: (11) 2888-5500 <br>E-mail: lapatito@sp.senac.br</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1227059826097!2d-46.694390323739825!3d-23.52808866037254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8775663b04f%3A0x923835e9005f8309!2sSenac%20Lapa%20Tito!5e0!3m2!1spt-BR!2sbr!4v1689619535400!5m2!1spt-BR!2sbr" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape_conteudo">
+            <div class="logo_rodape">
+                <a href="index.html"><img src="imagem/logo.png" alt="logotipo"></a>
+            </div>
+            <div class="menu_rodape">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Terrestre</a></li>
+                    <li><a href="#">Montanha</a></li>
+                    <li><a href="#">Áquático</a></li>
+                    <li><a href="#">Áreo</a></li>
+                </ul>
+            </div>
+
+            <div class="menu_rodape">
+                <ul>
+                    <li><a href="pacotes.html">Pacotes</a></li>
+                    <li><a href="acessorios.html">Acessorios</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="redes">
+                <aside>
+                    <img src="imagem/facebook.png" alt=" logo do Facebook">
+                    <img src="imagem/insta.png" alt=" logo do Instagram">
+                    <img src="imagem/youtube.png" alt=" logo do Youtube">
+                </aside>
+            </div>
+        </div>
+
+        <div class="assinatura">
+            <p>Desenvolvido por <b>WALTER SOUZA</b> Site acadêmico | Todos os direitos reservados | SENAC TITO &copy; 2023</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
